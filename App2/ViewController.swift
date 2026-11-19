@@ -17,6 +17,10 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         search.searchBar.delegate = self
         navigationItem.searchController = search
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        table.reloadData()
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return horoscopes.count
     }

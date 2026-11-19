@@ -11,6 +11,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dates: UILabel!
     @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var favorite: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -21,5 +22,6 @@ class TableViewCell: UITableViewCell {
         name.text = horoscope.name
         dates.text = horoscope.dates
         icon.image = horoscope.icon
+        favorite.isHidden = !Session().favorite(id: horoscope.id)
     }
 }

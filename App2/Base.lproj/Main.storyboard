@@ -46,10 +46,16 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                 </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w4Q-2K-GQR">
+                                                    <rect key="frame" x="352" y="13" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dates" destination="qN3-tl-DXg" id="P8k-NH-0b6"/>
+                                            <outlet property="favorite" destination="w4Q-2K-GQR" id="wjh-ls-DDE"/>
                                             <outlet property="icon" destination="YUm-Yk-7by" id="iaf-NR-qv7"/>
                                             <outlet property="name" destination="UDB-l9-4ep" id="itn-bR-cT9"/>
                                             <segue destination="zaO-fJ-LWG" kind="show" id="eHE-pw-EXX"/>
@@ -78,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.8320610687022" y="136.61971830985917"/>
+            <point key="canvasLocation" x="1058.7786259541983" y="136.61971830985917"/>
         </scene>
         <!--Horoscope View Controller-->
         <scene sceneID="L8g-38-Vbb">
@@ -92,10 +98,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="FT0-Q8-Qkd">
                         <rightBarButtonItems>
-                            <barButtonItem image="heart" catalog="system" id="Qrb-0e-uyl"/>
-                            <barButtonItem image="square.and.arrow.up" catalog="system" id="i65-pD-MpF"/>
+                            <barButtonItem image="heart" catalog="system" id="Qrb-0e-uyl">
+                                <connections>
+                                    <action selector="favorite:" destination="zaO-fJ-LWG" id="Gt0-Nc-GMK"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="square.and.arrow.up" catalog="system" id="i65-pD-MpF">
+                                <connections>
+                                    <action selector="share:" destination="zaO-fJ-LWG" id="UXw-JO-rDD"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="favorite" destination="Qrb-0e-uyl" id="BUN-GX-2ub"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9V-2u-Hb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,12 +139,16 @@
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="111"/>
+        <image name="heart.fill" catalog="system" width="128" height="111"/>
         <image name="square.and.arrow.up" catalog="system" width="107" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.21960784310000001" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
