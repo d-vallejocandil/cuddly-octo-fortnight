@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1061.8320610687022" y="136.61971830985917"/>
         </scene>
-        <!--View Controller-->
+        <!--Horoscope View Controller-->
         <scene sceneID="L8g-38-Vbb">
             <objects>
-                <viewController id="zaO-fJ-LWG" sceneMemberID="viewController">
+                <viewController id="zaO-fJ-LWG" customClass="HoroscopeViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rMj-F6-7fJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
