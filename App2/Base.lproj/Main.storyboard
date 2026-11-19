@@ -90,7 +90,12 @@
                         <viewLayoutGuide key="safeArea" id="cqK-ET-g02"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FT0-Q8-Qkd"/>
+                    <navigationItem key="navigationItem" id="FT0-Q8-Qkd">
+                        <rightBarButtonItems>
+                            <barButtonItem image="heart" catalog="system" id="Qrb-0e-uyl"/>
+                            <barButtonItem image="square.and.arrow.up" catalog="system" id="i65-pD-MpF"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9V-2u-Hb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,6 +121,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="111"/>
+        <image name="square.and.arrow.up" catalog="system" width="107" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
